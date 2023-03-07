@@ -1,0 +1,18 @@
+
+
+body {
+    counter-reset: h2counter;
+    color : black;
+}
+
+h2 {
+    color: #993399; 
+}
+
+h2:before {
+    content: counter(h2counter) ".\0000a0\0000a0";
+    counter-increment: h2counter;
+    counter-reset: h3counter;
+}
+
+

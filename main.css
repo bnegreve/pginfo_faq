@@ -1,13 +1,21 @@
-
-
 body {
     counter-reset: h2counter;
     color : black;
 }
 
-h2 {
+body a{
     color: #993399;
 }
+
+body a:visited{
+    color: #663366;
+}
+
+h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited {
+    color: #993399;
+    text-decoration: none;
+}
+
 
 h2:before {
     content: counter(h2counter) ".\0000a0\0000a0";

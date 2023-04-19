@@ -15,26 +15,26 @@ body a:visited{
     color: #663366;
 }
 
-h0, h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited {
+h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3 a, h3 a:visited {
   font-family: 'Raleway', 'IBM Plex sans-serif', 'Arial', sans-serif;
   font-weight: bold;
   text-decoration: none;
   text-indent: 0px;
 }
 
-h0 {
+h1 {
   font-size: 32pt;
   color: black;
-}
-
-h1, h1 a, h1 a:visited {
-  color: #333;
+  text-align: center;
 }
 
 h2, h2 a, h2 a:visited {
   color: #369;
 }
 
+h3, h3 a, h3 a:visited {
+  color: #369;
+}
 
 h2.faq:before {
   content: counter(h2counter) ".\0000a0\0000a0";
@@ -43,6 +43,7 @@ h2.faq:before {
 }
 
 dt {
+  margin-top: .5em;
   font-weight: bold;
 }
 
@@ -117,6 +118,11 @@ ul.sidenav li a:hover:not(.active):not(.activeflag):not(.flag) {
   color: white;
 }
 
+ul.sidenav li.title a:hover:not(.active):not(.activeflag):not(.flag) {
+  background-color: inherit;
+  color: inherit;
+}
+
 div.content {
   margin-left: 20%;
   padding: 1px 16px;
@@ -133,7 +139,7 @@ li {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 75%;
 }
 
 .logotext{
@@ -204,7 +210,7 @@ li {
 
   .logotext {
     display: none;
-  }  
+  }
 
   div.content {
     margin-left: 0;

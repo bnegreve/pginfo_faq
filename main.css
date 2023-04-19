@@ -1,3 +1,7 @@
+* {
+    font-family: 'IBM Plex sans-serif', 'Arial', sans-serif;
+}
+
 body {
     counter-reset: h2counter;
     color : black;
@@ -11,18 +15,214 @@ body a:visited{
     color: #663366;
 }
 
-h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited {
-    color: #993399;
-    text-decoration: none;
+h0, h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited {
+  font-family: 'Raleway', 'IBM Plex sans-serif', 'Arial', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-indent: 0px;
+}
+
+h0 {
+  font-size: 32pt;
+  color: black;
+}
+
+h1, h1 a, h1 a:visited {
+  color: #333;
+}
+
+h2, h2 a, h2 a:visited {
+  color: #369;
 }
 
 
-h2:before {
-    content: counter(h2counter) ".\0000a0\0000a0";
-    counter-increment: h2counter;
-    counter-reset: h3counter;
+h2.faq:before {
+  content: counter(h2counter) ".\0000a0\0000a0";
+  counter-increment: h2counter;
+  counter-reset: h3counter;
 }
 
 dt {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #f0f0f0;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+ul.sidenav li.title {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+}
+
+ul.sidenav li.flags {
+  height: 50px;
+  display: inline;
+  float: left;
+  width: 50%;
+}
+
+ul.sidenav li.link {
+  height: 50px;
+  clear: left;
+}
+
+ul.sidenav li a {
+  font-family: 'Raleway', 'IBM Plex sans-serif', 'Arial', sans-serif;
+  display: block;
+  color: black;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+ul.sidenav li a.flag {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+}
+
+ul.sidenav li a.active {
+  background-color: #306090;
+  color: white;
+}
+
+ul.sidenav li a.activeflag {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  background-color: #333;
+  color: white;
+}
+
+ul.sidenav li a:hover:not(.active):not(.activeflag):not(.inactive) {
+  background-color: #808080;
+  color: white;
+}
+
+ul.sidenav li a:hover:not(.active):not(.activeflag):not(.flag) {
+  background-color: #7090b0;
+  color: white;
+}
+
+div.content {
+  margin-left: 20%;
+  padding: 1px 16px;
+  line-height: 1.2;
+  text-indent: 20px;
+  height: 100%;
+}
+
+li {
+  text-indent: 0px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.logotext{
+  font-family: 'Raleway', 'IBM Plex sans-serif', 'Arial', sans-serif;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  font-weight:bold;
+  font-size:1vw;
+  color: black;
+  text-align: center;
+}
+
+.hidable{
+  font-family: 'Raleway', 'IBM Plex sans-serif', 'Arial', sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  ul.sidenav li {
+    float: left;
+  }
+
+  ul.sidenav li.title {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.sidenav li.flags {
+    height: 50px;
+    width: auto;
+    float: left;
+  }
+
+  ul.sidenav li.link {
+    height: 50px;
+    clear: none;
+  }
+
+  ul.sidenav li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 15px 0px 15px;
+  }
+
+  ul.sidenav li a.flag {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  ul.sidenav li a.activeflag {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logo {
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 100%;
+    width: auto;
+  }
+
+  .logotext {
+    display: none;
+  }  
+
+  div.content {
+    margin-left: 0;
+  }
+
+  .hidable {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+
+  .logo{
+    display: none;
+  }
+
 }

@@ -33,7 +33,7 @@ h2, h2 a, h2 a:visited {
 }
 
 h3, h3 a, h3 a:visited {
-  color: #369;
+    color: #369;
 }
 
 h2.faq:before {
@@ -127,7 +127,7 @@ div.content {
   margin-left: 20%;
   padding: 1px 16px;
   line-height: 1.2;
-  text-indent: 20px;
+  text-indent: 0px;
   height: 100%;
 }
 
@@ -232,3 +232,4 @@ li {
   }
 
 }
+
